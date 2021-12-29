@@ -187,9 +187,12 @@ function subdomain_from_url(url, base) {
     return "a";
   }
 
+  console.log(m[2]);
+
   var g = parseInt(m[2] + m[1], b);
   if (!isNaN(g)) {
-    retval = String.fromCharCode(97 + gg_m(g)) + retval;
+    console.log(g);
+    retval = String.fromCharCode(97 + gg_m[g]) + retval;
   }
 
   return retval;
@@ -224,7 +227,8 @@ function url_from_hash(galleryid, image, dir, ext) {
   );
 }
 
-console.log(full_path_from_hash('1420ab0856575a39e35f3579c128fa4435a655fefefb073ec01fc89093fd7197'));
+console.log(subdomain_from_url(full_path_from_hash('da502008149d13612246eafccbcab202e8dfab8e3faefb0b63a9cc2132405f13')));
+console.log(full_path_from_hash('da502008149d13612246eafccbcab202e8dfab8e3faefb0b63a9cc2132405f13'));
 
 function url_from_url_from_hash(galleryid, image, dir, ext, base) {
   if ("tn" === base) {
